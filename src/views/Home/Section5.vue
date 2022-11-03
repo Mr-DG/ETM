@@ -4,6 +4,8 @@
       <div class="title">
         Entertainment public chain
         ETM content ledger
+        <div class="crown"><img src="../../assets/imgs/pc/crown.png" alt=""></div>
+        <div class="balloon"><img src="../../assets/imgs/pc/balloon.png" alt=""></div>
       </div>
       <div class="content">
         <div class="content-item">
@@ -67,7 +69,31 @@
       text-align: center;
       line-height: 1.2;
       text-shadow: 0px 7px 0px #000;
+      margin-top: 100rem;
       margin-bottom: 30rem;
+      position: relative;
+
+      .crown {
+        position: absolute;
+        right: -10rem;
+        top: -40rem;
+        z-index: -1;
+
+        img {
+          width: 100rem;
+        }
+      }
+
+      .balloon {
+        position: absolute;
+        left: 80rem;
+        top: -150rem;
+        z-index: -1;
+
+        img {
+          width: 300rem;
+        }
+      }
     }
 
     .content {
@@ -105,6 +131,12 @@
       .title {
         font-size: 48rem;
         margin: 0 auto 140rem;
+
+        .balloon {
+          img {
+            width: 200rem;
+          }
+        }
       }
 
       .content {
@@ -120,8 +152,6 @@
               width: 64rem;
             }
           }
-
-          .item-right {}
         }
       }
     }

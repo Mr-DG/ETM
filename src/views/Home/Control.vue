@@ -36,6 +36,7 @@ li {
 @media screen and (max-width: 750px) {
   #sectionControl {
     right: 20px;
+    top: 55%;
   }
 }
 </style>
