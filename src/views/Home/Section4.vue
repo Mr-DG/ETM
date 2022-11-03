@@ -1,5 +1,10 @@
 <template>
-  <div class="section section4">
+  <div class="section section4" :class="{
+    active: currentIndex == 3,
+    preActive: prevIndex == 3,
+    sectionMoveFromBottom: direction && currentIndex == 3,
+    sectionMoveFromTop: !direction && currentIndex == 3
+  }">
     <div class="container">
       <div class="title">
         Entertainment public chain
@@ -14,7 +19,10 @@
   </div>
 </template>
 <script setup>
-
+import { inject } from 'vue';
+const currentIndex = inject('currentIndex')
+const prevIndex = inject('prevIndex')
+const direction = inject('currentIndex')
 </script>
 <style scoped lang="less">
 .section4 {
