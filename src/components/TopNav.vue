@@ -90,7 +90,7 @@ const handleClick = () => {
       width: 200rem;
       height: 500rem;
       background-color: rgba(0, 0, 0, .5);
-      z-index: 99999999999;
+      z-index: 9999;
 
       div {
         padding: 0;
