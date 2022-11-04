@@ -7,10 +7,7 @@
     "preview": "vite preview --port 4173"
   },
   "dependencies": {
-    "pinia": "^2.0.14",
-    "swiper": "^8.2.2",
-    "vue": "^3.2.36",
-    "vue-router": "^4.0.15"
+    "vue": "^3.2.36"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",

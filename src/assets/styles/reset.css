@@ -8,6 +8,13 @@ body,
   height: 100%;
   /* height: 100vh; */
   overflow: hidden;
+  font-family: "my-font";
+}
+
+
+@font-face {
+  font-family: "my-font";
+  src: url("../font/锐字真言体.TTF");
 }
 
 .main {

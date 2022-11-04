@@ -1,10 +1,5 @@
 <template>
-  <div class="section section2" :class="{
-    active: currentIndex == 1,
-    preActive: prevIndex == 1,
-    sectionMoveFromBottom: direction && currentIndex == 1,
-    sectionMoveFromTop: !direction && currentIndex == 1
-  }">
+  <div class="section section2">
     <div class="content">
       Each NFT is non-fungible or non-substitutable , the opposite of Fungible Tokenof which Bitcoin is an exampleThe
       music industry chain mainly consists of three parts : contentproviders ( musicians , record companies , etc . )
@@ -14,10 +9,6 @@
   </div>
 </template>
 <script setup>
-import { inject } from 'vue';
-const currentIndex = inject('currentIndex')
-const prevIndex = inject('prevIndex')
-const direction = inject('currentIndex')
 </script>
 <style scoped lang="less">
 .section2 {

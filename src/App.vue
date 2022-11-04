@@ -1,4 +1,5 @@
 <script setup>
+import Home from './views/Home/Home.vue'
 // 响应式（改变html的font-size）
 function refreshRem() {
   const docEl = document.documentElement
@@ -13,7 +14,7 @@ window.addEventListener('resize', refreshRem)
 </script>
 
 <template>
-  <router-view />
+  <Home />
 </template>
 
 <style>

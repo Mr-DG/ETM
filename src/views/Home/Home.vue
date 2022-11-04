@@ -7,11 +7,7 @@
       preActive: prevIndex == 0,
       sectionMoveFromTop: !direction && currentIndex == 0,
     }" />
-    <component :is="isShow2 && Section2" />
-    <component :is="isShow3 && Section3" />
-    <component :is="isShow4 && Section4" />
-    <component :is="isShow5 && Section5" />
-    <!-- <Section2 :class="{
+    <Section2 :class="{
       active: currentIndex == 1,
       preActive: prevIndex == 1,
       sectionMoveFromBottom: direction && currentIndex == 1,
@@ -34,11 +30,11 @@
       preActive: prevIndex == 4,
       sectionMoveFromBottom: direction && currentIndex == 4,
       sectionMoveFromTop: !direction && currentIndex == 4
-    }" /> -->
+    }" />
   </div>
 </template>
 <script setup>
-import { onMounted, onUnmounted, ref, provide, watch } from 'vue'
+import { onMounted, onUnmounted, ref } from 'vue'
 import TopNav from '../../components/TopNav.vue'
 import Control from './Control.vue'
 import Section1 from './Section1.vue'
@@ -48,10 +44,6 @@ import Section4 from './Section4.vue'
 import Section5 from './Section5.vue'
 const navItem = document.getElementsByClassName('nav-item')
 const pageUlLi = document.getElementsByClassName('pageUlLi')
-const isShow2 = ref(true)
-const isShow3 = ref(false)
-const isShow4 = ref(false)
-const isShow5 = ref(false)
 // 要跳转的section
 const currentIndex = ref(0)
 // 上一个section
@@ -60,28 +52,6 @@ const prevIndex = ref()
 const direction = ref(true)
 // 记录是否是点击触发
 const isClick = ref(false)
-
-provide('direction', direction)
-provide('currentIndex', currentIndex)
-provide('prevIndex', prevIndex)
-
-watch(() => currentIndex.value, () => {
-  if (currentIndex.value == 1) {
-    isShow2.value = true
-    isShow3.value = true
-  }
-  if (currentIndex.value == 2) {
-    isShow3.value = true
-    isShow4.value = true
-  }
-  if (currentIndex.value == 3) {
-    isShow4.value = true
-    isShow5.value = true
-  }
-  if (currentIndex.value == 4) {
-    isShow5.value = true
-  }
-})
 
 // 切换section
 const toSection = (index) => {

@@ -1,10 +1,5 @@
 <template>
-  <div class="section section3" :class="{
-    active: currentIndex == 2,
-    preActive: prevIndex == 2,
-    sectionMoveFromBottom: direction && currentIndex == 2,
-    sectionMoveFromTop: !direction && currentIndex == 2
-  }">
+  <div class="section section3">
     <div class="container">
       <div class="title">ETM Economics Model</div>
       <div class="content">
@@ -36,10 +31,6 @@
   </div>
 </template>
 <script setup>
-import { inject } from 'vue';
-const currentIndex = inject('currentIndex')
-const prevIndex = inject('prevIndex')
-const direction = inject('currentIndex')
 </script>
 <style scoped lang="less">
 .section3 {
